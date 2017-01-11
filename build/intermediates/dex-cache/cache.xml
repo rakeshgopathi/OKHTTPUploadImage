@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_824fa312f8b96038be5b29c21599a1a23cd3d78b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\okio-1.9.0_9828bf2ecd309e6fedfb29ec359425a50334d0fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_c2fe27b27346bc04ff62784b9be0b72905779923.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_15d30252096177de29f3443eeef45d85b6dd6504.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_e2e58868cb9d9830d2fba30428760b2e18c1a00d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_c6f83ed1a6fe60ad42dbe33c1e0e8559f78fcc33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e87195db02da7ab48c724980f8e866429b85fa9a">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_96b45856df045ee73067d4eb154a1c47599a90ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.4.0_2b1a79e0d6244f7e20160bfa3df42ba2df2138af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1_8a27c08db335f99b367d933fe0f650ff9197f4f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d1baa8fb47b06e3f6b618f6b46497b8833888b0f">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\instant-run_1c7032bcfd24d1b485d71be3631b3406b1acd5bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_5b08a57cbef09ef0be2bdd68fa791c5c6e90f419.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_6d48940865ba95336eaa477c43f607c6676c3373.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_4715c6c74c431013dee2d21b4c77a95d76226f7b.jar" />
+    </item>
+
+</items>
