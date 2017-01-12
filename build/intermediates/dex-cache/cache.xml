@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="e87195db02da7ab48c724980f8e866429b85fa9a">
+        sha1="5d365b200b700bf1ec99c91d0c106ecfe27b9760">
         <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_96b45856df045ee73067d4eb154a1c47599a90ab.jar" />
     </item>
     <item
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="d1baa8fb47b06e3f6b618f6b46497b8833888b0f">
+        sha1="0d3c8022bd32d12076fdbe230ea305d30b8e8edd">
         <dex dex="C:\Users\Rakesh\Desktop\opensourceProjects\imageHandling\okhttp_multipart\OKHTTPUploadImage\app\build\intermediates\pre-dexed\debug\instant-run_1c7032bcfd24d1b485d71be3631b3406b1acd5bb.jar" />
     </item>
     <item

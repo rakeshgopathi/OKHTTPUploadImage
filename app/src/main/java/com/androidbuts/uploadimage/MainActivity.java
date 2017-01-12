@@ -38,6 +38,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class MainActivity extends AppCompatActivity {
@@ -105,68 +106,105 @@ public class MainActivity extends AppCompatActivity {
         });
 
         imageView = (ImageView) findViewById(R.id.imageView);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!TextUtils.isEmpty(imagePath)) {
-
-                    /**
-                     * Uploading AsyncTask
-                     */
-                    if (InternetConnection.checkConnection(mContext)) {
-                        new AsyncTask<Void, Integer, Boolean>() {
-
-                            ProgressDialog progressDialog;
-
-                            @Override
-                            protected void onPreExecute() {
-                                super.onPreExecute();
-                                progressDialog = new ProgressDialog(MainActivity.this);
-                                progressDialog.setMessage(getString(R.string.string_title_upload_progressbar_));
-                                progressDialog.show();
-                            }
-
-                            @Override
-                            protected Boolean doInBackground(Void... params) {
-
-                                try {
-                                    JSONObject jsonObject = JSONParser.uploadImage(imagePath);
-                                    if (jsonObject != null)
-                                        return jsonObject.getString("result").equals("success");
-
-                                } catch (JSONException e) {
-                                    Log.i("TAG", "Error : " + e.getLocalizedMessage());
-                                }
-                                return false;
-                            }
-
-                            @Override
-                            protected void onPostExecute(Boolean aBoolean) {
-                                super.onPostExecute(aBoolean);
-                                if (progressDialog != null)
-                                    progressDialog.dismiss();
-
-                                if (aBoolean)
-                                    Toast.makeText(getApplicationContext(), R.string.string_upload_success, Toast.LENGTH_LONG).show();
-                                else
-                                    Toast.makeText(getApplicationContext(), R.string.string_upload_fail, Toast.LENGTH_LONG).show();
-
-                                imagePath = "";
-                                textView.setVisibility(View.VISIBLE);
-                                imageView.setVisibility(View.INVISIBLE);
-                            }
-                        }.execute();
-                    } else {
-                        Snackbar.make(findViewById(R.id.parentView), R.string.string_internet_connection_warning, Snackbar.LENGTH_INDEFINITE).show();
-                    }
-                } else {
-                    Snackbar.make(findViewById(R.id.parentView), R.string.string_message_to_attach_file, Snackbar.LENGTH_INDEFINITE).show();
-                }
-            }
-        });
     }
+
+    public void downloadImage(View view) {
+       /* new AsyncTask<Void, Integer, Boolean>() {
+
+            ProgressDialog progressDialog;
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                progressDialog = new ProgressDialog(MainActivity.this);
+                progressDialog.setMessage(getString(R.string.string_title_upload_progressbar_));
+                progressDialog.show();
+            }
+
+            @Override
+            protected Boolean doInBackground(Void... params) {
+                String jsonObject = null;
+                try {
+                    jsonObject = JSONParser.get(JSONParser.URL_DOWNLOAD_IMAGE+"a7196168-c09f-4648-9a96-d716dcfea3c4");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return jsonObject != null;
+            }
+
+            @Override
+            protected void onPostExecute(Boolean aBoolean) {
+                super.onPostExecute(aBoolean);
+                if (progressDialog != null)
+                    progressDialog.dismiss();
+
+                if (aBoolean)
+                    Toast.makeText(getApplicationContext(), R.string.string_upload_success, Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(getApplicationContext(), R.string.string_upload_fail, Toast.LENGTH_LONG).show();
+
+                imagePath = "";
+                textView.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.INVISIBLE);
+            }
+        }.execute();*/
+
+        imageView.setVisibility(View.VISIBLE);
+        textView.setVisibility(View.INVISIBLE);
+        Picasso.with(mContext).load(JSONParser.URL_DOWNLOAD_IMAGE+"a7196168-c09f-4648-9a96-d716dcfea3c4")
+                .error(R.drawable.ic_cloud_upload_white_36dp)
+                .into(imageView);
+    }
+
+    public void showImagePicker(View view){
+        if (!TextUtils.isEmpty(imagePath)) {
+
+            /**
+             * Uploading AsyncTask
+             */
+            if (InternetConnection.checkConnection(mContext)) {
+                new AsyncTask<Void, Integer, Boolean>() {
+
+                    ProgressDialog progressDialog;
+
+                    @Override
+                    protected void onPreExecute() {
+                        super.onPreExecute();
+                        progressDialog = new ProgressDialog(MainActivity.this);
+                        progressDialog.setMessage(getString(R.string.string_title_upload_progressbar_));
+                        progressDialog.show();
+                    }
+
+                    @Override
+                    protected Boolean doInBackground(Void... params) {
+                        String jsonObject = JSONParser.uploadImage(imagePath);
+                        return jsonObject != null;
+                    }
+
+                    @Override
+                    protected void onPostExecute(Boolean aBoolean) {
+                        super.onPostExecute(aBoolean);
+                        if (progressDialog != null)
+                            progressDialog.dismiss();
+
+                        if (aBoolean)
+                            Toast.makeText(getApplicationContext(), R.string.string_upload_success, Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(getApplicationContext(), R.string.string_upload_fail, Toast.LENGTH_LONG).show();
+
+                        imagePath = "";
+                        textView.setVisibility(View.VISIBLE);
+                        imageView.setVisibility(View.INVISIBLE);
+                    }
+                }.execute();
+            } else {
+                Snackbar.make(findViewById(R.id.parentView), R.string.string_internet_connection_warning, Snackbar.LENGTH_INDEFINITE).show();
+            }
+        } else {
+            Snackbar.make(findViewById(R.id.parentView), R.string.string_message_to_attach_file, Snackbar.LENGTH_INDEFINITE).show();
+        }
+    }
+
 
     /**
      * Showing Image Picker
@@ -221,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
             imageView.setVisibility(View.VISIBLE);
         }
     }
-    
+
     @SuppressLint("NewApi")
     public static String getFilePath(Context context, Uri uri) throws URISyntaxException {
         String selection = null;

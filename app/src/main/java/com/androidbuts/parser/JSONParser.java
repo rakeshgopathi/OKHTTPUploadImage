@@ -5,6 +5,7 @@ import android.util.Log;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.UnknownHostException;
 
@@ -23,52 +24,34 @@ import static android.content.ContentValues.TAG;
  */
 public class JSONParser {
 
+    public static String get(String url)throws IOException {
+        OkHttpClient okHttpClient = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("Accept", "application/json")
+                .build();
+
+        Response response = okHttpClient.newCall(request).execute();
+        return response.body().string();
+    }
+
     /**
      * Upload URL of your folder with php file name...
      * You will find this file in php_upload folder in this project
      * You can copy that folder and paste in your htdocs folder...
      */
-    private static final String URL_UPLOAD_IMAGE = "http://g5-api.azurewebsites.net/api/file/upload";
-
+    public static final String URL_UPLOAD_IMAGE = "http://g5-api.azurewebsites.net/api/file/upload/";
+    public static final String URL_DOWNLOAD_IMAGE = "http://g5-api.azurewebsites.net/api/file/download/";
     /**
      * Upload Image
      *
      * @param sourceImageFile
      * @return
      */
-    public static JSONObject uploadImage(String sourceImageFile) {
-
+    public static String uploadImage(String sourceImageFile) {
         try {
-
-            String res = uploadImage(sourceImageFile, URL_UPLOAD_IMAGE);
-            /*File sourceFile = new File(sourceImageFile);
-
-            Log.d("TAG", "File...::::" + sourceFile + " : " + sourceFile.exists());
-
-            final MediaType MEDIA_TYPE_PNG = MediaType.parse("image*//*");
-
-            String filename = sourceImageFile.substring(sourceImageFile.lastIndexOf("/")+1);
-
-            RequestBody requestBody = new MultipartBody.Builder()
-                    .setType(MultipartBody.FORM)
-                    .addFormDataPart("uploaded_file", filename, RequestBody.create(MEDIA_TYPE_PNG, sourceFile))
-                    .addFormDataPart("result", "my_image")
-                    .build();
-
-            Request request = new Request.Builder()
-                    .url(URL_UPLOAD_IMAGE)
-                    .post(requestBody)
-                    .build();
-
-            OkHttpClient client = new OkHttpClient();
-            Response response = client.newCall(request).execute();
-            String res = response.body().string();*/
-            Log.e("TAG", "Error: " + res);
-            return new JSONObject(res);
-
-        } /*catch (UnknownHostException | UnsupportedEncodingException e) {
-            Log.e("TAG", "Error: " + e.getLocalizedMessage());
-        }*/ catch (Exception e) {
+            return uploadImage(sourceImageFile, URL_UPLOAD_IMAGE);
+        }  catch (Exception e) {
             Log.e("TAG", "Other Error: " + e.getLocalizedMessage());
         }
         return null;
